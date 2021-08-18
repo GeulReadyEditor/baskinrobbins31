@@ -6,7 +6,6 @@ from libs.sentence_complete import complete
 
 
 app = Flask(__name__)
-app.debug = True
 
 
 @app.route("/summarizer", methods=['POST'])
