@@ -1,0 +1,148 @@
+  html,
+  body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100%;
+  }
+  
+  #write-margin,
+  #treeview-margin,
+  #memo-margin {
+      margin-top: -36px !important;
+  }
+  
+  #treeview-size {
+      width: 20% !important;
+      margin-top: 43px;
+      float: left;
+  }
+  
+  #editor-size {
+      width: 60%;
+      text-align: left;
+      margin-top: 40px;
+      margin-bottom: 3px;
+      bottom: 0px;
+      float: left;
+  }
+  
+  #memo-size {
+      width: 20%;
+      height: 88vh;
+      margin-top: 43px;
+      float: left;
+  }
+  
+  .tiptap-vuetify-editor__content {
+      height: 72vh;
+      overflow-y: auto !important;
+  }
+  
+  .v-treeview {
+      height: 85vh;
+      overflow-y: auto !important;
+  }
+  
+  .itemLink {
+      color: black !important;
+  }
+  
+  .item-title {
+      padding-top: 3px;
+      padding-left: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+  }
+  
+  .v-application--is-ltr .v-treeview-node__prepend {
+      margin-right: 0px;
+  }
+  /* .tiptap-vuetify-editor__content {
+      font-size: 2rem;
+      font-weight: bolder;
+  } */
+  
+  .v-application--is-ltr .memo-text-area.v-textarea.v-text-field--enclosed .v-text-field__slot textarea {
+      margin-top: 0px;
+  }
+  
+  .memo-margin {
+      margin-left: 8px;
+      margin-right: 14px;
+      margin-bottom: 20px;
+  }
+  
+  .memo-delete-margin {
+      padding-right: 4px;
+      text-align: right;
+  }
+  
+  #prose-mirror>h1:not(:empty):before,
+  #prose-mirror>h2:not(:empty):before {
+      content: attr(data-text);
+      color: darkgray;
+      font-style: italic;
+  }
+  
+  .item-title .v-text-field.v-text-field--enclosed:not(.v-text-field--rounded)>.v-input__control>.v-input__slot,
+  .v-text-field.v-text-field--enclosed .v-text-field__details {
+      padding: 0px;
+  }
+  
+  .item-title .v-input__slot {
+      margin-bottom: 0px;
+  }
+  
+  .item-title input[readonly] {
+      cursor: pointer;
+  }
+  
+  .v-application--is-ltr .v-treeview-node__content {
+      margin-bottom: -5px;
+      margin-top: -5px;
+  }
+  /* .v-treeview-node__root.v-treeview-node--active {
+      pointer-events: none;
+  } */
+  /* .v-treeview-node__toggle {
+      pointer-events: all;
+  } */
+  
+  #img-btn {
+      margin-right: 500px;
+  }
+  
+  #text-editor .v-sheet.v-card {
+      border-radius: 4px 4px 0px 0px;
+  }
+  
+  .title-card.v-sheet.v-card {
+      border-radius: 4px 4px 0px 0px;
+  }
+  
+  .title-card .v-label {
+      font-style: italic;
+      opacity: 65%;
+  }
+  
+  .title-card .v-text-field--outlined.v-input--dense .v-label {
+      top: auto !important;
+  }
+  
+  .v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer,
+  .v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,
+  .v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,
+  .v-text-field--full-width.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer,
+  .v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-outer,
+  .v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__prepend-inner,
+  .v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-inner,
+  .v-text-field--enclosed.v-input--dense:not(.v-text-field--solo).v-text-field--outlined .v-input__append-outer {
+      /* margin-top: auto; */
+      margin: auto !important;
+      padding-bottom: 4px;
+      padding-left: 4px;
+      margin-right: -4px !important;
+  }

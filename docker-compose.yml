@@ -1,0 +1,16 @@
+version: "3"
+services:
+    frontend:
+        image: 'owenyi3207/onego-frontend'
+        stdin_open: true
+    nginx:
+        restart: always
+        image: 'owenyi3207/onego-nginx'
+        ports:
+            - "80:80"
+    backend:
+        image: 'owenyi3207/onego-backend'
+    ai:
+        image: 'owenyi3207/onego-ai'
+    ai_train:
+        image: 'owenyi3207/onego-ai_train'

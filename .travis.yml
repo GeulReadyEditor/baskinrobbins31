@@ -1,0 +1,38 @@
+language: generic
+
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t owenyi3207/vue-test-app -f ./frontend/Dockerfile.dev ./frontend
+
+script:
+  - docker run -e CI=true owenyi3207/vue-test-app yarn run lint -- --fix 
+
+after_success:
+  - docker build -t owenyi3207/onego-frontend ./frontend
+  - docker build -t owenyi3207/onego-backend ./backend
+  - docker build -t owenyi3207/onego-ai ./ai
+  - docker build -t owenyi3207/onego-nginx ./nginx
+
+  - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_ID" --password-stdin
+
+  - docker push owenyi3207/onego-frontend
+  - docker push owenyi3207/onego-backend
+  - docker push owenyi3207/onego-ai
+  - docker push owenyi3207/onego-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "onego"
+  env: "Onego-env"
+  bucket_name: elasticbeanstalk-ap-northeast-2-310881911728
+  bucket_path: "onego"
+  on:
+    branch: main
+  
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
